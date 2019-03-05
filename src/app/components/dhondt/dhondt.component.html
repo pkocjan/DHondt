@@ -1,0 +1,12 @@
+<table mat-table [dataSource]="committees" >
+  <ng-container  matColumnDef="Dzielnik">
+    <th mat-header-cell *matHeaderCellDef> Dzielnik</th>
+    <td *matCellDef="let element;"> {{element.name}} </td>
+  </ng-container>
+  <ng-container *ngFor="let c of columnName | slice:1" matColumnDef="{{c}}">
+    <th mat-header-cell *matHeaderCellDef> {{c}}</th>
+    <td *matCellDef="let element;"  [ngClass]="{'election': element.quotients[c - 1].election}"> {{element.quotients[c - 1].votes | number : '0.0-2'}} </td>
+  </ng-container>
+  <tr mat-header-row *matHeaderRowDef="columnName"></tr>
+  <tr mat-row *matRowDef="let row; columns: columnName"></tr>
+</table>

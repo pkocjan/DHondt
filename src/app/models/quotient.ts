@@ -1,12 +1,9 @@
-import { Party } from './party';
-
 export class Quotient {
-  party: Party;
   divider: number;
   votes: number;
+  election: boolean;
 
-  constructor(party: Party, divider: number, votes: number) {
-    this.party = party;
+  constructor(divider: number, votes: number) {
     this.divider = divider;
     this.votes = votes;
   }

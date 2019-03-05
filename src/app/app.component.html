@@ -1,11 +1,2 @@
-<div *ngFor="let party of parties">
-  <input type="text" [(ngModel)]="party.name">
-  <input type="number" [(ngModel)]="party.votes">
-  <input type="number" [(ngModel)]="party.electionThreshold">
-</div>
-
-<div>
-  <input type="number" [(ngModel)]="mandates">
-</div>
-
-<button (click)="convert()">Convert</button>
+<app-title></app-title>
+<router-outlet></router-outlet>

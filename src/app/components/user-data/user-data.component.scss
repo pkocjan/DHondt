@@ -1,0 +1,33 @@
+@import '../../app.component.scss';
+
+$add: #00cc00;
+.formCommittee{
+  display: block;
+  @extend %borderBottom;
+  padding: 5px;
+  margin-bottom: 5px;
+
+  .remove {
+    margin-top: 15px;
+    background-color: $remove-color;
+  }
+}
+#sumVotes {
+  padding-top: 10px;
+  margin-right: 40px;
+  div {
+    height: 45.5px;
+    margin-left: 2px;
+  }
+}
+.mandates {
+  margin-right: 10px;
+}
+.convert {
+  background-color: $blue;
+  color: white;
+}
+.add {
+  margin-left: 15px;
+  background-color: $add !important;
+}

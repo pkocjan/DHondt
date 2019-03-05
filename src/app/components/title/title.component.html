@@ -1,0 +1,28 @@
+<mat-card class="title">
+  <mat-card-header >
+    <mat-card-title>
+      <button mat-icon-button (click)="showDhontInformation()">
+        <mat-icon>keyboard_arrow_{{arrow}}</mat-icon>
+      </button>
+      Metoda D’Hondta
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content *ngIf="showContent" fxLayout="row" fxLayout.xs="column" fxShow.xs="showContent">
+    <div fxLayout="column" fxFlex="50">
+      <p class="description" fxFlex="50">
+        Metoda D’Hondta – metoda stosowana do podziału mandatów w systemach wyborczych opartych na proporcjonalnej reprezentacji z listami partyjnymi. Jej nazwa pochodzi od nazwiska belgijskiego matematyka Victora D’Hondta.
+      </p>
+      <p class="description" fxFlex="50">
+        W metodzie tej dla każdego komitetu wyborczego, który przekroczył próg wyborczy, obliczane są kolejne ilorazy pomiędzy całkowitą liczbą głosów uzyskanych przez dany komitet a następującymi po sobie liczbami naturalnymi, czyli tzw. ilorazy wyborcze. O podziale miejsc pomiędzy komitetami decyduje wielkość obliczonych w ten sposób ilorazów.
+      </p>
+    </div>
+    <div id="formula" fxFlex="50">
+      <ng-katex [equation]="equation" id="mathFormula"></ng-katex>
+      gdzie:
+      <div><ng-katex [equation]="_I" class="mathFormulaElement"></ng-katex> - wielkość danego ilorazu wyborczego,</div>
+
+      <div><ng-katex [equation]="_L" class="mathFormulaElement"></ng-katex> - całkowita liczba głosów oddana na dany komitet w wyborach,</div>
+      <div><ng-katex [equation]="_n" class="mathFormulaElement"></ng-katex> - kolejne liczby naturalne ≥ 1.,</div>
+    </div>
+  </mat-card-content>
+</mat-card>

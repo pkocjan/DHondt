@@ -1,0 +1,38 @@
+
+mat-card.title{
+  mat-card-title {
+    margin-bottom: 0;
+  };
+  margin-bottom: 10px;
+}
+
+.mat-card-header .mat-card-title{
+  font-size: 25px;
+}
+
+.description{
+  margin-top: 0px;
+  text-align: justify;
+};
+#formula {
+  padding-left: 15px;
+
+  #mathFormula {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 40px;
+    text-align: center;
+  };
+
+  .mathFormulaElement{
+    font-size: 20px;
+    vertical-align: middle;
+  }
+};
+@media only screen and (max-width: 600px) {
+  #formula {
+    padding-left: 0px;
+  }
+}
+
+

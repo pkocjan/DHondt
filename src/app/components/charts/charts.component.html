@@ -1,0 +1,10 @@
+<mat-card>
+  <div class="description">Komitety wyborcze</div>
+  <committee-detail [committees]="committees"></committee-detail>
+  <div class="description">Tabela D'Hondta</div>
+  <dhondt-table [committees]="committees"></dhondt-table>
+  <div class="description">Poparcie Procentowe </div>
+  <bar-chart [committees]="committees"></bar-chart>
+  <div class="description">Podział Mandatów </div>
+  <pie-chart [committees]="committees"></pie-chart>
+</mat-card>

@@ -1,0 +1,9 @@
+<mat-list fxLayout="row wrap">
+  <mat-list-item  fxFlex="auto" fxFlex.sm="50" fxFlex.md="33" fxFlex.gt-md="20" *ngFor="let committee of committees">
+    <mat-icon mat-list-icon>people</mat-icon>
+    <h4 mat-line>{{committee.name}}</h4>
+    <p mat-line> {{committee.votes}} glosów</p>
+    <p mat-line> {{committee.percentageOfVotes | number :'0.0-2'}} %</p>
+    <p mat-line> {{committee.mandates}} mandatów</p>
+  </mat-list-item>
+</mat-list>

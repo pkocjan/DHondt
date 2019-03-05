@@ -1,0 +1,21 @@
+@import '../../app.component.scss';
+
+bar-chart, pie-chart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+committee-detail, dhondt-table {
+  display: block;
+}
+committee-detail, dhondt-table, bar-chart{
+  @extend %borderBottom;
+  padding-bottom: 10px;
+};
+.description {
+  text-align: center;
+  font-size: 20px;
+}
+.description:not(:first-child){
+  padding-top: 20px;
+}

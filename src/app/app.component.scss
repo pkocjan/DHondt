@@ -1,0 +1,8 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+$remove-color: #FF2E2E;
+$blue:  #6666ff;
+
+%borderBottom {
+  border-bottom: 2px dashed $blue;
+}

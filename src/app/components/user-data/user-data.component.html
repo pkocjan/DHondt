@@ -1,0 +1,27 @@
+<mat-card>
+  <form [formGroup]="committeesForm" (ngSubmit)=(convert(committeesForm))>
+    <div class="formCommittee" formArrayName="committees" *ngFor="let com of allCommittes.controls; index as i;"  fxLayout="row" fxLayout.xs="column">
+      <add-committee fxFlex [formGroup]="com" (removeCommittee)="removeFormItem($event)"></add-committee>
+      <button class="remove" fxFlex="40px" mat-mini-fab (click)="removeFormItem(i)">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </div>
+    <div fxLayout="row" id="sumVotes">
+      <div fxFlex="33">
+        Suma glosow:
+      </div>
+      <div fxFlex="66">
+        {{sumVotes()}}
+      </div>
+      </div>
+      <mat-form-field class="mandates">
+        <input matInput type="number" formControlName="availableMandates" placeholder="Iloć mandatów">
+    </mat-form-field>
+    <button class="convert" mat-raised-button [disabled]="!committeesForm.valid" type="submit">
+      Convert
+    </button>
+    <button class="add" mat-mini-fab (click)="addCommittee()">
+      <mat-icon>add</mat-icon>
+    </button>
+  </form>
+</mat-card>

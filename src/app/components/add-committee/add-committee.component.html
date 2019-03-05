@@ -1,0 +1,15 @@
+<div [formGroup]="formGroup" >
+  <mat-form-field fxFlex="33" >
+    <input matInput type="text" placeholder="Nazwa komitetu" formControlName="committeeName">
+  </mat-form-field>
+  <mat-form-field fxFlex="33" >
+    <input matInput type="number" placeholder="Ilosc glosow" formControlName="committeeVotes">
+  </mat-form-field>
+  <mat-form-field fxFlex="33" >
+    <mat-select  placeholder="Próg wyborczy" formControlName="committeeElectionThreshold">
+      <mat-option *ngFor="let et of electionThresholds" [value]="et">
+        {{et}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
