@@ -5,7 +5,7 @@
 * [Technologies](#technologies)
 * [Setup](#setup)
 
-# General info
+## General info
 Angular app to calculate number of mandates by the D'Hondt method.
 
 ## Technologies
